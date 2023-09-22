@@ -1,0 +1,7 @@
+.search {
+  display: flex;
+
+  & > button {
+    align-self: flex-end;
+  }
+}
