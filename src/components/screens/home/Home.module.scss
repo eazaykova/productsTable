@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  & div:last-child {
+    align-self: flex-end;
+  }
+}
