@@ -1,0 +1,10 @@
+@import "../../../assets/styles/_variables.scss";
+
+.pagination {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.pageCurrent {
+  background-color: $additional;
+}
