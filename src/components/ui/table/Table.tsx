@@ -12,6 +12,7 @@ const Table = ({ products }: TableProps) => {
     <table className={styles.table}>
       <thead>
         <tr>
+          <th></th>
           {cellTitle.map((title) => (
             <th key={`__key_${title}`}>{title}</th>
           ))}
