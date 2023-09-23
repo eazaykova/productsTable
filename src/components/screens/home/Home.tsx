@@ -12,11 +12,12 @@ import { options } from "../../../data/options.data";
 import Sorting from "../../ui/sorting/Sorting";
 import { useProducts } from "../../../hooks/useProducts";
 import Loading from "../../loading/Loading";
+import { IProduct } from "../../../models/IProduct";
 
 function Home() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
   const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(20);
+  const limit = 20;
   const [page, setPage] = useState(1);
 
   const [fetchProducts, isLoading, error] = useFetching(async () => {
@@ -73,9 +74,10 @@ function Home() {
           />
         </>
       ) : (
-        <h1 className={styles.title}>Продукты не найдены!</h1>
+        <h1 className={styles.title}>
+          {error ? `Ошибка запроса!` : `Продукты не найдены!`}
+        </h1>
       )}
-      {error && <h1 className={styles.title}>Ошибка запроса!</h1>}
     </section>
   );
 }
