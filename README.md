@@ -25,7 +25,7 @@ $ yarn dev
 
 ### Used frameworks and tools:
 
-- JavaScript
+- TypeScript
 - React
 - Sass
 - Vite
